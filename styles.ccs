@@ -1,0 +1,22 @@
+:root{--bg:#0d0d0d;--accent:#ff0088}
+*{box-sizing:border-box;margin:0;font-family:monospace}
+body{background:var(--bg);color:#fff;display:flex;flex-direction:column;height:100vh;user-select:none;-webkit-user-select:none}
+header{display:flex;justify-content:space-between;align-items:center;padding:8px 12px}
+button,select{background:var(--accent);border:none;color:#fff;padding:8px 12px;border-radius:4px;font-weight:bold}
+#romInput{display:none}
+#shell{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center}
+#screen{background:#000;max-width:100%;max-height:60vh}
+#touchControls{position:fixed;bottom:0;left:0;right:0;height:35vh;display:grid;grid-template-areas:
+"dpad . ab"
+"dpad . ab"
+". startSelect .";gap:12px;padding:12px}
+#dpad{grid-area:dpad;display:grid;grid-template-areas:
+". up ."
+"left . right"
+". down .";width:120px;height:120px}
+#dpad button{background:rgba(255,255,255,.15);border-radius:50%}
+#dpad .up{grid-area:up} #dpad .left{grid-area:left} #dpad .right{grid-area:right} #dpad .down{grid-area:down}
+#ab{grid-area:ab;display:flex;gap:12px;align-items:center}
+#ab button{width:56px;height:56px;border-radius:50%;background:rgba(255,0,136,.6)}
+#startSelect{grid-area:startSelect;display:flex;gap:12px}
+#startSelect button{background:rgba(255,255,255,.2)}

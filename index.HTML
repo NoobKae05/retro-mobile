@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Retro Pocket 3-in-1</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#0d0d0d">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>Retro Pocket</h1>
+  <select id="sys">
+    <option value="nes">NES</option>
+    <option value="gen">Genesis</option>
+    <option value="neo">Neo-Geo</option>
+  </select>
+  <button id="loadBtn">📂 Load ROM</button>
+</header>
+
+<input id="romInput" type="file" accept=".nes,.bin,.md,.gen,.zip">
+
+<div id="shell">
+  <canvas id="screen" width="256" height="224"></canvas>
+  <div id="touchControls">
+    <!-- D-Pad -->
+    <div id="dpad">
+      <button data-key="38" class="up">▲</button>
+      <button data-key="37" class="left">◀</button>
+      <button data-key="40" class="down">▼</button>
+      <button data-key="39" class="right">▶</button>
+    </div>
+    <!-- A/B  (becomes B/C on Neo, A/B on Gen) -->
+    <div id="ab">
+      <button data-key="88" class="b">B</button>
+      <button data-key="90" class="a">A</button>
+    </div>
+    <!-- Start / Select (becomes Start on Neo/Gen) -->
+    <div id="startSelect">
+      <button data-key="13">Start</button>
+      <button data-key="16">Select</button>
+    </div>
+  </div>
+</div>
+
+<!-- cores -->
+<script src="js/jsnes.min.js"></script>
+<script src="js/genplusgx.js"></script>
+<script src="js/neogeo.js"></script>
+<script src="script.js"></script>
+<script>navigator.serviceWorker.register('sw.js');</script> </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "Retro Pocket",
+  "short_name": "RetroP",
+  "display": "standalone",
+  "background_color": "#0d0d0d",
+  "theme_color": "#ff0088",
+  "icons": [
+    {
+      "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "index.html"
+}
